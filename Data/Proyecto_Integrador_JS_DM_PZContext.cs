@@ -12,6 +12,7 @@ using Proyecto_Integrador_JS_DM_PZ.Models.Dominio;
         {
         }
 
-        public DbSet<Proyecto_Integrador_JS_DM_PZ.Models.Dominio.BlogPost> BlogPost { get; set; } = default!;
+        public DbSet<Proyecto_Integrador_JS_DM_PZ.Models.Dominio.BlogPost> BlogPost { get; set; } = default!; //conectar con la base de datos
+
         public DbSet<Proyecto_Integrador_JS_DM_PZ.Models.Dominio.Tag> Tag { get; set; } = default!;
     }
