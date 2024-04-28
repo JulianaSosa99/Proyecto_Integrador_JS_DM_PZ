@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Proyecto_Integrador_JS_DM_PZContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("Proyecto_Integrador_JS_DM_PZContext") ?? throw new InvalidOperationException("Connection string 'Proyecto_Integrador_JS_DM_PZContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
